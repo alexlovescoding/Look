@@ -1,4 +1,9 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ["ionic", "firebase"])
+
+.factory("Auth", function($firebaseAuth) {
+  var usersRef = new Firebase("https://peregrine-falcon.firebaseio.com/users");
+  return $firebaseAuth(usersRef);
+})
 
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
