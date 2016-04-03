@@ -5,9 +5,19 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
+  <!-- Login Tab -->
+  <ion-tab title="Login" icon-off="ion-ios-circle-outline" icon-on="ion-ios-circle-filled" href="#/tab/login">
+    <ion-nav-view name="tab-login"></ion-nav-view>
+  </ion-tab>
+
   <!-- Home Tab -->
   <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/home">
     <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Staring Interface Tab -->
+  <ion-tab title="Staring Interface" icon-off="ion-ios-eye-outline" icon-on="ion-ios-eye" href="#/tab/staring-interface">
+    <ion-nav-view name="tab-staring-interface"></ion-nav-view>
   </ion-tab>
 
   <!-- Leaderboard Tab -->

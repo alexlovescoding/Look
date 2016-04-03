@@ -1,19 +1,21 @@
 <ion-view view-title="Staring Interface">
+  <body>
   <ion-content class="padding">
 
-  <body>
   <div class="square"></div>
   <div class="square"></div>
   <div class="square"></div>
   <div class="square"></div>
 
   <div id="opponent">
-    <div id="you"></div>
+    <img ng-src="{{opponentPhoto}}">
+    <div id="you">
+      <img ng-src="{{yourPhoto}}">
+    </div>
   </div>
 
-  </body>
-
   </ion-content>
+  </body>
 
   <ion-footer-bar class="bar-positive">
     <button class="button button-outline button-assertive">

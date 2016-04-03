@@ -37,6 +37,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
+ .state('tab.login', {
+      url: '/login',
+      views: {
+        'tab-login': {
+          templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+        }
+      }
+    })
+
   .state('tab.home', {
       url: '/home',
       views: {
@@ -46,6 +56,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+
+  .state('tab.staring-interface', {
+    url: '/staring-interface',
+    views: {
+      'tab-staring-interface': {
+        templateUrl: 'templates/staring-interface.html',
+        controller: 'StaringInterfaceCtrl'
+      }
+    }
+  })
 
   .state('tab.leaderboard', {
     url: '/leaderboard',
@@ -65,16 +85,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'MeCtrl'
         }
       }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
+})
 
   .state('tab.settings', {
     url: '/settings',
@@ -87,6 +98,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/home');
+  $urlRouterProvider.otherwise('/tab/login');
 
 });
