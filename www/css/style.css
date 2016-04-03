@@ -1,12 +1,9 @@
-<style>
-
-#square {
+.square {
 	height: 25px;
 	width: 25px;
 	border: 2px solid black;
-	position: justified;
+	align: justified;
 	display: block;
-
 }
 
 #opponent {
@@ -25,7 +22,3 @@
   position: absolute;
   margin: 373px 0 0 173px;
 }
-
-
-
-</style>
