@@ -1,9 +1,10 @@
-.square {
+#square {
 	height: 25px;
 	width: 25px;
 	border: 2px solid black;
-	align: justified;
+	position: justified;
 	display: block;
+
 }
 
 #opponent {
@@ -21,4 +22,24 @@
   border: 2px solid black;
   position: absolute;
   margin: 373px 0 0 173px;
+}
+
+
+.center {
+    position: justified;
+    margin: 485px 0px 0 150px;
+
+}
+
+#fb {
+  width: 80%;
+  margin-top: 317px;
+  margin-bottom: 25px;
+  margin-left: 43px;
+
+}
+
+#twitter  {
+  width: 80%;
+  margin-left: 43px;
 }

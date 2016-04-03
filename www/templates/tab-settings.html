@@ -1,13 +1,7 @@
 <ion-view view-title="Settings">
+  <ion-nav-bar class="bar-stable bar-royal">
+    <ion-navicon></ion-navicon>
+  </ion-nav-bar>
   <ion-content>
-    <ion-list>
-      <button style="width:100%" class="item" ng-hide="authData" class="card" ng-click="settings.login()">
-          Log In with Facebook
-      </button>
-      <button style="width:100%" class="item" ng-show="authData" class="card" ng-click="settings.logout()">
-        <div><img src="{{authData.facebook.profileImageURL}}"/></div>
-        <div>Logout ({{authData.facebook.displayName}})</div>
-      </button>
-    </ion-list>
   </ion-content>
 </ion-view>
