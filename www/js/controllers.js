@@ -1,17 +1,9 @@
 angular.module('starter.controllers', [])
 
-.controller('HomeCtrl', function($scope) {})
-
-.controller('LeaderboardCtrl', function($scope) {})
-
-.controller('MeCtrl', function($scope, Auth) {})
-
-.controller('SettingsCtrl', function($scope, Auth) {
-  $scope.settings = {
-    login: function() {
-
+.controller('HomeCtrl', function($scope, Auth) {
+  $scope.login = function() {
     Auth.$authWithOAuthRedirect("facebook").then(function(authData) {
-    // User successfully logged in
+      // User successfully logged in
     }).catch(function(error) {
       if (error.code === "TRANSPORT_UNAVAILABLE") {
         Auth.$authWithOAuthPopup("facebook").then(function(authData) {
@@ -27,15 +19,22 @@ angular.module('starter.controllers', [])
         if (authData === null) {
           console.log("Not logged in yet");
         } else {
-            console.log("Logged in as", authData.uid);
+          console.log("Logged in as", authData.uid);
         }
-          $scope.authData = authData;
-        });
+        $scope.authData = authData;
       });
+    });
+  }
+})
 
-    },
-    logout: function() {
-      Auth.$unauth();
-    }
+.controller('LeaderboardCtrl', function($scope) {})
+
+.controller('MeCtrl', function($scope, Auth) {
+
+})
+
+.controller('SettingsCtrl', function($scope, Auth) {
+  $scope.logout = function() {
+    Auth.$unauth();
   }
 });
